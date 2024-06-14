@@ -3,6 +3,11 @@ const http = require('http');
 const WebSocket = require('ws');
 const path = require('path');
 const EventHubReader = require('./scripts/event-hub-reader.js');
+const dotenv = require('dotenv');
+
+
+dotenv.configDotenv();
+dotenv.config();
 
 const iotHubConnectionString = process.env.IotHubConnectionString;
 if (!iotHubConnectionString) {
